@@ -2,7 +2,6 @@ import Banner from "../Components/Banner";
 import Breadcrumb from "../Components/Breadcrumb";
 import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar";
-import ProductCard from "../Common/ProductCard";
 import ProductCarousel from "../Components/ProductCoursel";
 import PopularProductSection from "../UI/PopularProductSection";
 
