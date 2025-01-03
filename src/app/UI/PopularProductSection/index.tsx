@@ -6,19 +6,18 @@ import { products } from "@/app/Constants/products";
 import ProductCard from "@/app/Common/ProductCard";
 
 const PopularProductSection = () => {
-  const [visibleProducts, setVisibleProducts] = useState(8); 
+  const [visibleProducts, setVisibleProducts] = useState(10);  // Initially show 10 products (2 rows of 5)
   const [loading, setLoading] = useState(false);
 
   const handleLoadMore = () => {
     setLoading(true);
     setTimeout(() => {
       setVisibleProducts((prevVisible) => {
-        // Add rows based on screen size
-        const productsToAdd = window.innerWidth >= 1024 ? 4 : 2; 
-        return prevVisible + productsToAdd;
+        // Add 10 more products (2 rows of 5) on each click
+        return prevVisible + 10;
       });
       setLoading(false);
-    }, 1000); 
+    }, 1000);
   };
 
   return (
@@ -33,7 +32,7 @@ const PopularProductSection = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-4 sm:px-6 md:px-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 px-4 sm:px-6 md:px-10">
         {products.slice(0, visibleProducts).map((product, index) => (
           <ProductCard
             key={index}

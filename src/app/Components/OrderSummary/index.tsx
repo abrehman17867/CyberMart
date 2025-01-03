@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const OrderSummary = () => {
   return (
-    <div className="mt-[-2rem] relative w-80 bg-white rounded-2xl shadow-md border border-gray-200">
+    <div className=" mt-[-2rem] relative w-80 bg-white rounded-2xl shadow-md border border-gray-200">
       {/* Header */}
       <div className="px-6 py-2 bg-[#F2F9FC] rounded-t-2xl shadow-lg">
         <h2 className="text-xs font-semibold text-gray-800">ORDER SUMMARY</h2>
